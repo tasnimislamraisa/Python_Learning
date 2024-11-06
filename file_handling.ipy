@@ -1,0 +1,9 @@
+print("hi")
+try:
+    with open('raisa.txt', 'r') as f:
+        text = f.read()
+        print(text)
+except FileNotFoundError:
+    print("The file 'raisa.txt' was not found.")
+except IOError:
+    print("An error occurred while reading the file.")

@@ -25,7 +25,21 @@ l1 = [1,2,3,4,5]
 def filter_func(x) :
     return x>3
 
-newlist=list(filter(filter_func,l1))
+newlist1=list(filter(filter_func,l1))
+print("Using filter : ",*newlist1,end=" ")
+print()
 
-print("Using filter : ",*newlist,end=" ")
+newlist2=list(filter(lambda x : True if x>3 else False ,l1))
+print("Using filter : ",*newlist2,end=" ")
+print()
+
+# Reduce
+
+from functools import reduce
+num=[1,2,3,4,5]
+
+summation = reduce(lambda x,y : x+y,num)
+
+print(f"Total summation of the list : {summation}")
+
 

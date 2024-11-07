@@ -1,12 +1,29 @@
-try:
-    with open('raisa.txt', 'r') as f:
-        text = f.read()
-        print(text)
-except FileNotFoundError:
-    print("The file 'raisa.txt' was not found.")
-except IOError:
-    print("An error occurred while reading the file.")
+# file read 
+f=open('myfile.txt', 'r')
+text=f.read()
+print(text)
+f.close()
 
 o=open('myfile.txt', 'w')    
 o.write("Hello, world!")
 o.close()
+
+'''
+'a' = append
+o=open('myfile.txt', 'a')    
+o.write("Hello, world!")
+o.close()'''
+
+# using with open we don't need to close the file
+
+try:
+    with open('raisa.txt', 'r') as r:
+        text = r.read()
+        print(text)
+    with open('myfile.txt', 'a') as append:
+        append.write("Hey Again!")
+
+except FileNotFoundError:
+    print("The file 'raisa.txt' was not found.")
+except IOError:
+    print("An error occurred while reading the file.")

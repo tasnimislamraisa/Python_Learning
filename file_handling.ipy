@@ -7,6 +7,9 @@ f.close()
 # file write
 o=open('myfile.txt', 'w')    
 o.write("Hello, world!")
+o.truncate(5)
+with open('myfile.txt', 'r') as f:
+    print(f.read())
 o.close()
 
 # file write append
@@ -61,11 +64,11 @@ with open('myfile.txt','r') as f :
     print(type(f))
 
     # Move to the 10th byte in the file
-    f.seek(10)
+    f.seek(5)
 
     # Save the current position
     print(f.tell())
 
     # Read the next 5 byte
-    data=f.read(8)
+    data=f.read(5)
     print(data)

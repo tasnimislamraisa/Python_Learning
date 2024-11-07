@@ -30,7 +30,7 @@ print("Using filter : ",*newlist1,end=" ")
 print()
 
 newlist2=list(filter(lambda x : True if x>3 else False ,l1))
-print("Using filter : ",*newlist2,end=" ")
+print("Using filter lambda : ",*newlist2,end=" ")
 print()
 
 # Reduce

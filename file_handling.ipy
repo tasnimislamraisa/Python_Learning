@@ -63,6 +63,9 @@ with open('myfile.txt','r') as f :
     # Move to the 10th byte in the file
     f.seek(10)
 
+    # Save the current position
+    print(f.tell())
+
     # Read the next 5 byte
-    data=f.read(5)
+    data=f.read(8)
     print(data)

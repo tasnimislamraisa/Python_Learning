@@ -1,4 +1,3 @@
-print("hi")
 try:
     with open('raisa.txt', 'r') as f:
         text = f.read()
@@ -7,3 +6,7 @@ except FileNotFoundError:
     print("The file 'raisa.txt' was not found.")
 except IOError:
     print("An error occurred while reading the file.")
+
+o=open('myfile.txt', 'w')    
+o.write("Hello, world!")
+o.close()
